@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Vineet's Light Automation</title>
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="/static/assets/css/Button-FAB.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="/static/assets/css/Pretty-Header.css">
+    <link rel="stylesheet" href="/static/assets/css/PUSH---Bootstrap-Button-Pack-1.css">
+    <link rel="stylesheet" href="/static/assets/css/PUSH---Bootstrap-Button-Pack-3.css">
+    <link rel="stylesheet" href="/static/assets/css/PUSH---Bootstrap-Button-Pack-2.css">
+    <link rel="stylesheet" href="/static/assets/css/PUSH---Bootstrap-Button-Pack.css">
+    <link rel="stylesheet" href="/static/assets/css/Rounded-Button.css">
+    <link rel="stylesheet" href="/static/assets/css/styles.css">
+    <link rel="stylesheet" href="/static/assets/css/The-Matrix-Display.css">
+</head>
+<script  src="/static/script.js"></script>
+<body style="min-height: none;border-radius: 5px;background: rgb(26, 110, 82);">
+    <nav class="navbar navbar-light navbar-expand-md custom-header"
+        style="width: 100%;margin-bottom: 7px;height: 56px;">
+        <div class="container-fluid">
+            <div><a class="navbar-brand text-center text-sm-center text-md-center text-lg-center text-xl-center"
+                    href="#"
+                    style="text-align: justify;margin-top: -14px;margin-right: 0px;height: 10px;margin-left: -8px;"
+                    target="_blank">Vineet's Home Light Automation</a></div>
+        </div>
+    </nav>
+    <div class="container text-center" style="height: 70px;width: 100%;">
+        <p id="datadisplay"
+            class="text-center align-items-center align-content-center align-self-center m-auto typed_text"
+            data-bs-hover-animate="wobble" id="typed_text"
+            style="height: 65px;background: #000000;width: 320px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;margin-left: 0px;font-size: 29px;text-align: center;font-family: Raleway, sans-serif;border-bottom: 9px solid rgb(46,64,46) ;border-left: 7px solid rgb(46,64,46) ;">
+            STATUS OK</p>
+    </div>
+    <div class="matrix-bg-dark" style="width: 200px;">
+        <div id="tt_container"></div>
+    </div>
+    <div class="col-auto text-center align-self-center"><button onclick="direct('/light');"
+            class="btn btn-primary text-sm-center text-md-center text-lg-center justify-content-center align-items-center align-content-center align-self-center"
+            type="button"
+            style="padding: 10px;margin: 0px;width: 208px;min-width: 43px;max-width: 222px;height: 52px;margin-top: 0;margin-right: 0px;margin-left: 7px;margin-bottom: 5px;background: rgb(6,169,159);border-radius: -9px;border: 3px solid rgb(143,138,130) ;border-right-style: dotted;border-bottom-width: 8px;border-bottom-color: rgb(241,234,223);border-left: 7px solid rgb(171,164,152) ;" >Tubelight
+            toggle<br></button></div>
+    <div class="col-12 text-center align-self-center" style="width: 100%;"><button
+            class="btn btn-primary text-center bounce animated sharp" type="button"
+            style="width: 80px;padding: 7px;background: rgb(234,234,234);color: rgb(21,21,21);"
+            onclick="direct('/led/0');" >0</button><button class="btn btn-info text-center bounce animated sharp"
+            type="button" style="width: 80px;padding: 7px;background: rgb(6,6,6);"
+            onclick="direct('/led/1');" >1</button><button class="btn btn-warning text-center bounce animated sharp"
+            type="button" style="width: 80px;padding: 7px;background: rgb(132,96,61);"
+            onclick="direct('/led/2');" >2</button><button class="btn btn-danger text-center bounce animated sharp"
+            type="button" style="width: 80px;padding: 7px;background: rgb(150,6,6);"
+            onclick="direct('/led/3');" >3</button></div>
+    <div class="col"
+        style="text-align: center;border-radius: 0px;border-width: 0px;border-style: solid;border-left-width: 0px;border-left-color: rgba(17,18,17,0);width: 100%;">
+        <button class="btn btn-danger" data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #ff0000;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/4');" >4</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #008f31;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/5');" >5</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #000aff;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/6');" >6</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #ffdaf5;color: rgb(0,0,0);border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/7');" >7</button>
+        <div></div><button class="btn btn-danger" data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;color: rgb(255,255,255);background: #fc4c00;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/8');" >8</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #61d66d;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/9');" >9</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #4864fb;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/10');" >10</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #4b4b4b;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/11');" >11</button>
+        <div></div><button class="btn btn-danger" data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #ff7e47;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/12');" >12</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #6c9eff;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/13');" >13</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #520059;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/14');" >14</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #4b4b4b;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/15');" >15</button>
+        <div></div><button class="btn btn-danger" data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #e8bc67;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/16');" >16</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #4a8fcf;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/17');" >17</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #9b38a3;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/18');" >18</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #4b4b4b;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/19');" >19</button>
+        <div></div><button class="btn btn-danger" data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #ffd600;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/20');" >20</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #257395;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/21');" >21</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #dd5dc1;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/22');" >22</button><button class="btn btn-danger"
+            data-bs-hover-animate="pulse"
+            style="width: 61px;height: 50px;margin: 6px;padding: 6px;background: #4b4b4b;border-radius: 30px;border-style: solid;border-right-width: 0px;border-bottom-width: 0px;border-bottom-style: dashed;border-left-width: 6px;border-left-color: rgb(143,138,130);"
+            type="button" onclick="direct('/led/23');" >23</button>
+    </div>
+    <div class="col-12 text-center align-self-center" style="width: 100%;">
+        <h3 style="font-family: Abel, sans-serif;color: rgb(93,142,55);text-align: center;"></h3><button
+            class="btn btn-primary text-center bounce animated sharp" type="button"
+            style="width: 101px;padding: 0px;background: rgb(103,85,177);color: #ffffff;margin: 1px;font-size: 12px;margin-right: 5px;margin-left: 1px;height: 46px;text-align: left;border-radius: 0px;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;border-width: 0px;border-bottom: 8px solid rgb(255,255,255) ;border-left: 8px solid rgb(143,138,130) ;"
+            onclick="direct('/shutdown');" >Shutdown</button>
+        <button class="btn btn-warning text-center bounce animated sharp" type="button"
+            style="width: 101px;padding: 7px;background: rgb(90,117,187);margin: 1px;color: #ffffff;font-size: 12px;margin-right: 5px;margin-left: 1px;height: 46px;border-radius: 0px;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;border-bottom: 8px solid rgb(255,255,255) ;border-left: 8px solid rgb(143,138,130) ;"
+            onclick="direct('/ir');" >Ir</button>
+        <button class="btn btn-danger text-center bounce animated sharp" type="button"
+            style="width: 101px;padding: 7px;background: rgb(103,85,177);margin: 1px;color: #ffffff;font-size: 12px;margin-right: 5px;margin-left: 1px;height: 46px;border-radius: 0px;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;border-bottom: 8px solid rgb(255,255,255) ;border-left: 8px solid rgb(143,138,130) ;"
+            onclick="direct('/restart');" >Restart</button>
+    </div>
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/bs-init.js"></script>
+    <script src="/static/assets/js/The-Matrix-Display.js"></script>
+    
+</body>
+
+</html>
